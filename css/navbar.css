@@ -1,0 +1,156 @@
+/* ============================= */
+/* Navbar Base Styles            */
+/* ============================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  background: hsl(var(--background) / 0.8);
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem; /* 64px = h-16 */
+}
+
+/* ============================= */
+/* Logo                          */
+/* ============================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: hsl(var(--foreground));
+}
+
+#navbar-icon {
+  color: hsl(var(--primary)); /* rocket color */
+  width: auto;
+}
+
+.logo-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* ============================= */
+/* Desktop Links & Actions       */
+/* ============================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  color: hsl(var(--muted-foreground));
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.nav-link.active {
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.gradient-btn {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.gradient-btn:hover {
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* Mobile Styles                 */
+/* ============================= */
+
+/* default hidden toggle */
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: hsl(var(--foreground));
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+/* hide desktop links & actions on mobile, show toggle */
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+/* desktop overrides */
+@media (min-width: 769px) {
+  .mobile-toggle {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* ============================= */
+/* Mobile Menu                   */
+/* ============================= */
+
+.mobile-menu {
+  display: none;
+  border-top: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  padding: 1rem;
+}
+
+.mobile-menu.active {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
