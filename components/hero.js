@@ -27,11 +27,11 @@ export function Hero() {
     
           <!-- Buttons -->
           <div class="hero-buttons">
-            <a href="/dashboard" class="hero-btn-gradient">
+            <a href="dashboard.html" class="hero-btn-gradient">
               Start Free Trial
               <i data-lucide="arrow-right" class="icon-small"></i>
             </a>
-            <a href="/support" class="btn-outline">
+            <a href="support.html" class="btn-outline">
               Contact Support
             </a>
           </div>

@@ -25,7 +25,7 @@
 }
 
 .hero-content {
-  max-width: 640px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -60,7 +60,7 @@
 .hero-title {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 3.0rem;
+  font-size: 4rem !important;
   line-height: 1.1;
   margin: 0;
 }
@@ -87,7 +87,7 @@
 
 /* Paragraph */
 .hero-subtext {
-  font-size: 1.125rem;
+  font-size: 1.11rem !important;
   color: hsl(var(--muted-foreground));
   margin: 0 auto;
   max-width: 480px;
