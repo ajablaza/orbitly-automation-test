@@ -1,9 +1,11 @@
 import { Navbar } from "../components/navbar.js";
+import { Hero } from "../components/hero.js";
 
 const app = document.getElementById("app");
 
 // Render first
 app.innerHTML += Navbar();
+app.innerHTML += Hero();
 
 // Initialize icons
 lucide.createIcons();
